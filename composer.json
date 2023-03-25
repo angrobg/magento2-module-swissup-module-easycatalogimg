@@ -7,13 +7,14 @@
         "subcategory listing"
     ],
     "type": "magento2-module",
-    "version": "1.4.24",
     "license": "OSL-3.0",
     "require": {
         "swissup/module-core": "^1.12.12"
     },
     "autoload": {
-        "files": [ "registration.php" ],
+        "files": [
+            "registration.php"
+        ],
         "psr-4": {
             "Swissup\\Easycatalogimg\\": ""
         }
@@ -21,9 +22,9 @@
     "extra": {
         "swissup": {
             "links": {
-                "store"    : "https://swissuplabs.com/magento-2-easy-catalog-images.html",
-                "download" : "https://swissuplabs.com/subscription/customer/products/",
-                "docs"     : "http://docs.swissuplabs.com/m2/extensions/easycatalogimages/",
+                "store": "https://swissuplabs.com/magento-2-easy-catalog-images.html",
+                "download": "https://swissuplabs.com/subscription/customer/products/",
+                "docs": "http://docs.swissuplabs.com/m2/extensions/easycatalogimages/",
                 "changelog": "http://docs.swissuplabs.com/m2/extensions/easycatalogimages/changelog/"
             }
         },
