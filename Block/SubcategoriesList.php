@@ -101,6 +101,15 @@ class SubcategoriesList extends \Magento\Framework\View\Element\Template impleme
     }
 
     /**
+     * NIMA CHANGES
+     * @return bool
+     */
+    public function getPresentInSlider()
+    {
+        return (bool)$this->_getData('present_in_slider');
+    }
+
+    /**
     * Opimized method, to get all categories to show
     *
     * @return array

@@ -1,8 +1,11 @@
 <?php
+    /** @var \Swissup\Easycatalogimg\Block\Widget\SubcategoriesList $block */
+
     $_categories = $block->getCategories();
     if (!count($_categories)) {
         return;
     }
+    $presentInSlider = $block->getPresentInSlider();
     /* @var $block \Swissup\Easycatalogimg\Block\SubcategoriesList */
     $columnsCount = $block->getColumnCount();
     $height = $block->getImageHeight();
@@ -13,7 +16,7 @@
     $mode = $block->getMode();
 ?>
 <div class="easycatalogimg" data-content-type="easycatalogimg">
-<ul class="<?= $block->getCssClassName() ?>" data-mode="<?= $mode ?>" data-cols="<?= $columnsCount ?>">
+<ul class="easycatalogimg-list <?= $block->getCssClassName() ?>" data-mode="<?= $mode ?>" data-cols="<?= $columnsCount ?>">
 <?php foreach ($_categories as $_category) : ?>
     <?php if ($i++ >= $maxCategoryCount): break; endif; ?>
     <li class="item">
@@ -103,3 +106,45 @@
 <?php endforeach; ?>
 </ul>
 </div>
+<?php if ($presentInSlider) { ?>
+<script>
+    //<![CDATA[
+    require(['jquery','jquery_slick'], function($){
+        $('.easycatalogimg-list').slick({
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    });
+    //]]>
+</script>
+<?php } ?>

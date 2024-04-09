@@ -148,6 +148,36 @@
                 </validation>
             </settings>
         </field>
+        <!-- NIMA CHANGES -->
+        <field name="present_in_slider" sortOrder="61" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">0</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Present in slider</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">1</item>
+                                <item name="label" xsi:type="string" translate="true">Yes</item>
+                            </option>
+                            <option name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">0</item>
+                                <item name="label" xsi:type="string" translate="true">No</item>
+                            </option>
+
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <!-- END OF NIMA CHANGES -->
         <field name="show_image" sortOrder="70" formElement="select">
             <settings>
                 <dataType>text</dataType>

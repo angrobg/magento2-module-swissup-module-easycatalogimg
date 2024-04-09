@@ -29,6 +29,11 @@
                 <description>2 — 6 columns</description>
                 <value>4</value>
             </parameter>
+            <!-- NIMA CHANGES -->
+            <parameter name="present_in_slider" xsi:type="select" required="false" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="41">
+                <label translate="true">Present in slider</label>
+            </parameter>
+            <!-- END OF NIMA CHANGES -->
             <parameter name="show_image" xsi:type="select" visible="true" required="false" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="50">
                 <label translate="true">Show images</label>
             </parameter>

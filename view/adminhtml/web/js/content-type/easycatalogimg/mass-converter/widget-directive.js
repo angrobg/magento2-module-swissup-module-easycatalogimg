@@ -59,6 +59,9 @@ define([
       data.category_to_hide = attributes.category_to_hide;
       data.hide_when_filter_is_used = attributes.hide_when_filter_is_used;
 
+      // NIMA CHANGES
+      data.present_in_slider = attributes.present_in_slider;
+
       return data;
     }
     /**
@@ -85,7 +88,9 @@ define([
           sizes: data.sizes,
           category_to_show: data.category_to_show,
           category_to_hide: data.category_to_hide,
-          hide_when_filter_is_used: data.hide_when_filter_is_used
+          hide_when_filter_is_used: data.hide_when_filter_is_used,
+          // NIMA CHANGES
+          present_in_slider: data.present_in_slider
       };
 
       if (!attributes.category_id || !attributes.template) {

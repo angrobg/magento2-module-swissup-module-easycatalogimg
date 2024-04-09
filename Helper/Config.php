@@ -1,4 +1,5 @@
 <?php
+
 namespace Swissup\Easycatalogimg\Helper;
 
 use Magento\Framework\App\Action\Action;
@@ -62,6 +63,14 @@ class Config extends AbstractHelper
      * @var string
      */
     const XML_PATH_HIDE_WHEN_FILTER_IS_USED = 'easycatalogimg/category/hide_when_filter_is_used';
+
+    /**
+     * Path to store config present in slider
+     * NIMA CHANGES
+     *
+     * @var string
+     */
+    const XML_PATH_PRESENT_IN_SLIDER = 'easycatalogimg/category/present_in_slider';
 
     /**
      * Path to store config category count
@@ -130,7 +139,7 @@ class Config extends AbstractHelper
     /**
      * Get store config value
      *
-     * @param  string $key
+     * @param string $key
      * @return mixed
      */
     protected function _getConfig($key)
@@ -196,6 +205,15 @@ class Config extends AbstractHelper
     public function isEnabledForAnchor()
     {
         return (bool)$this->_getConfig(self::XML_PATH_ENABLED_FOR_ANCHOR);
+    }
+
+    /**
+     * NIMA CHANGES
+     * @return boolean
+     */
+    public function isPresentedInSlider()
+    {
+        return (bool)$this->_getConfig(self::XML_PATH_PRESENT_IN_SLIDER);
     }
 
     /**

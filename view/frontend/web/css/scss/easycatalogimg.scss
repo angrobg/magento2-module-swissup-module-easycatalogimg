@@ -24,6 +24,7 @@ $easycatalogimg-item-subcategory-font-size: 0.8em !default;
             @extend %listing-item-title;
             z-index: 1;
             position: absolute;
+            text-align: center;
             top: $easycatalogimg-item-title-top;
             @include left($easycatalogimg-item-title-left);
             padding: $easycatalogimg-item-title-padding;
