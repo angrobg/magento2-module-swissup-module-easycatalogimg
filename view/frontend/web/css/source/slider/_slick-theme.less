@@ -16,9 +16,27 @@
 @slick-opacity-on-hover: 1;
 @slick-opacity-not-active: 0.25;
 
+#easycatalog-categories-list {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slick-loading-indicator {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="none" stroke-opacity="1" stroke="%23E12F20" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="2" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="2" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="2" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>') no-repeat center;
+}
+
 /* Slider */
 .slick-loading .slick-list {
-    background: #fff url('@{slick-loader-path}ajax-loader.gif') center center no-repeat;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="none" stroke-opacity="1" stroke="%23E12F20" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="2" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="2" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="2" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>') no-repeat center;
+    //background: #fff url('@{slick-loader-path}ajax-loader.gif') center center no-repeat;
 }
 
 /* Arrows */
@@ -26,15 +44,15 @@
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
     background: transparent;
     color: transparent;
     top: 50%;
-    margin-top: -40px;
+    margin-top: 20px;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -65,6 +83,7 @@
     opacity: @slick-opacity-default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-left: 0 !important;
 
     & when ( @slick-font-family = 'slick' ) {
         /* Icons */
@@ -83,7 +102,7 @@
 .easycatalogimg {
 
     .slick-prev {
-        left: 20px !important;
+        left: 0 !important;
 
         [dir="rtl"] & {
             left: auto;
@@ -100,7 +119,7 @@
     }
 
     .slick-next {
-        right: 50px !important;
+        right: 0 !important;
 
         [dir="rtl"] & {
             left: 50px;
