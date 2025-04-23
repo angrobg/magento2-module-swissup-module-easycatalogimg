@@ -148,7 +148,6 @@
                 </validation>
             </settings>
         </field>
-        <!-- NIMA CHANGES -->
         <field name="present_in_slider" sortOrder="61" formElement="select">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -177,7 +176,6 @@
                 </select>
             </formElements>
         </field>
-        <!-- END OF NIMA CHANGES -->
         <field name="show_image" sortOrder="70" formElement="select">
             <settings>
                 <dataType>text</dataType>

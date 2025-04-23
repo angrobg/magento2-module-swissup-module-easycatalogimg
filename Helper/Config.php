@@ -66,7 +66,6 @@ class Config extends AbstractHelper
 
     /**
      * Path to store config present in slider
-     * NIMA CHANGES
      *
      * @var string
      */
@@ -208,7 +207,6 @@ class Config extends AbstractHelper
     }
 
     /**
-     * NIMA CHANGES
      * @return boolean
      */
     public function isPresentedInSlider()

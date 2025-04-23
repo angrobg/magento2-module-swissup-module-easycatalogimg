@@ -100,33 +100,11 @@ class SubcategoriesList extends \Magento\Framework\View\Element\Template impleme
         return ['easycatalogimg_subcategories_list'];
     }
 
-    /**
-     * NIMA CHANGES
-     * @return bool
-     */
     public function getPresentInSlider()
     {
         return (bool)$this->_getData('present_in_slider');
     }
 
-    /**
-    * Opimized method, to get all categories to show
-    *
-    * @return array
-    * <pre>
-    * [
-    *  \Magento\Catalog\Model\Category => {
-    *      children => [
-    *          \Magento\Catalog\Model\Category => {...}
-    *      ]
-    *  }
-    *  \Magento\Catalog\Model\Category => {
-    *      children => []
-    *  }
-    *  ...
-    * ]
-    * </pre>
-    */
     public function getCategories()
     {
         $storeId = $this->getCurrentStore()->getId();

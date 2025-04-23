@@ -44,12 +44,10 @@
                     <label>Enabled for anchor categories</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <!-- NIMA CHANGES -->
                 <field id="present_in_slider" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Present in slider</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <!-- END OF NIMA CHANGES -->
                 <field id="hide_when_filter_is_used" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hidden, when filter or pagination is used</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
